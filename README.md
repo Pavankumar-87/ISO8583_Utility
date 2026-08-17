@@ -19,6 +19,7 @@ This project uses a custom parser instead of libraries like `j8583` or `jPOS` to
 ---
 
 ## Project Structure
+```text
 ISO8583_Utility/
 ├── pom.xml
 └── src/
@@ -46,7 +47,7 @@ ISO8583_Utility/
         └── java/com/example/iso8583/
             └── Iso8583ParserTest.java
 
-## Message Flow Architecture
+Message Flow Architecture
 The implementation is structured into four distinct processing layers:
 TCP/IP byte stream
                                 │
@@ -87,7 +88,7 @@ TCP/IP byte stream
                                ▼
                            JSON / DTO
 
-## Example Processing Breakdown
+Example Processing Breakdown
 ISO Payload Hierarchy
 
 0200
@@ -113,7 +114,7 @@ Field 55
   ├── 9F36 -> Application Transaction Counter
   └── 5F2A -> Transaction Currency Code
 
-## Conceptual Output (JSON)
+Conceptual Output (JSON)
 {
   "55": [
     {
@@ -149,7 +150,7 @@ Field 55
   ]
 }
 
-## POS & Switch Layer Architecture
+POS & Switch Layer Architecture
 For POS terminal or payment switch implementations, the integration pipeline operates as follows:
 
 TCP Server / Netty
