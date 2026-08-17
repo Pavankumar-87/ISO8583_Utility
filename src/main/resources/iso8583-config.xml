@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<iso8583-profile name="ISO8583-1987-PRACTICAL">
+
+    <field number="2"
+           type="n"
+           lengthType="LLVAR"
+           maxLength="19"/>
+
+    <field number="3"
+           type="n"
+           lengthType="FIXED"
+           length="6"/>
+
+    <field number="4"
+           type="n"
+           lengthType="FIXED"
+           length="12"/>
+
+    <field number="7"
+           type="n"
+           lengthType="FIXED"
+           length="10"/>
+
+    <field number="11"
+           type="n"
+           lengthType="FIXED"
+           length="6"/>
+
+    <field number="12"
+           type="n"
+           lengthType="FIXED"
+           length="6"/>
+
+    <field number="13"
+           type="n"
+           lengthType="FIXED"
+           length="4"/>
+
+    <field number="22"
+           type="n"
+           lengthType="FIXED"
+           length="3"/>
+
+    <field number="35"
+           type="z"
+           lengthType="LLVAR"
+           maxLength="37"/>
+
+    <field number="37"
+           type="ans"
+           lengthType="FIXED"
+           length="12"/>
+
+    <field number="41"
+           type="ans"
+           lengthType="FIXED"
+           length="8"/>
+
+    <field number="42"
+           type="ans"
+           lengthType="FIXED"
+           length="15"/>
+
+    <field number="49"
+           type="ans"
+           lengthType="FIXED"
+           length="3"/>
+
+    <field number="52"
+           type="b"
+           lengthType="FIXED"
+           length="8"/>
+
+    <!-- EMV ICC data -->
+    <field number="55"
+           type="b"
+           lengthType="LLLVAR"
+           maxLength="999"
+           emv="true"/>
+
+    <!-- Private/network-specific field -->
+    <field number="127"
+           type="ans"
+           lengthType="LLLVAR"
+           maxLength="999"
+           emv="possible"/>
+
+</iso8583-profile>
