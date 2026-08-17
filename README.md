@@ -51,7 +51,7 @@ How the complete message flows :
                            │
                            ▼
                  ┌──────────────────┐
-                 │ FramingHandler    │
+                 │ FramingHandler   │
                  │                  │
                  │ Length Header    │
                  │ 2 / 4 bytes      │
@@ -89,27 +89,27 @@ How the complete message flows :
 
 For example:
 0200
-  ↓
+  |
 Primary Bitmap
-  ↓
+  |
 Secondary Bitmap (if required)
-  ↓
+  |
 Field 2
-  ↓
+  |
 Field 3
-  ↓
+  |
 Field 4
-  ↓
+  |
 ...
 Field 55
-  ↓
+  |
 03F... / EMV BER-TLV
-  ↓
-9F26 → Application Cryptogram
-9F10 → Issuer Application Data
-82   → Application Interchange Profile
-9F36 → Application Transaction Counter
-5F2A → Transaction Currency Code                    
+  |
+9F26 -> Application Cryptogram
+9F10 -> Issuer Application Data
+82   -> Application Interchange Profile
+9F36 -> Application Transaction Counter
+5F2A -> Transaction Currency Code                    
 
 will become conceptually:
 {
