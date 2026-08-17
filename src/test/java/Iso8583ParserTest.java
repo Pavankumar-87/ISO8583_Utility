@@ -226,7 +226,7 @@ class Iso8583ParserTest {
                                 4,
                                 value.length);
 
-                List<EmvTagDto> result = com.example.iso8583.parser.EmvTlvParser
+                List<EmvTagDto> result =  com.iso8583_utility.iso8583.parser.EmvTlvParser
                                 .parse(data);
 
                 assertEquals(1, result.size());
